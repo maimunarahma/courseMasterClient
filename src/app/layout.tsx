@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "../../components/navbar";
+import { AuthProvider } from "../../context/auth-context";
+import { QueryClientProviderWrapper } from '../../components/tanstack'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +22,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+          <QueryClientProviderWrapper>
+        <AuthProvider>
+        <Navbar />
+        <main className="pt-4">{children}</main>
+      </AuthProvider>
+      </QueryClientProviderWrapper>
       </body>
     </html>
   );
