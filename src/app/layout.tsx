@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "../../components/navbar";
 import { AuthProvider } from "../../context/auth-context";
 import { QueryClientProviderWrapper } from '../../components/tanstack'
+import { AuthInitializer } from "../../@/components/authInitializer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +26,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
           <QueryClientProviderWrapper>
+         
         <AuthProvider>
+             <AuthInitializer>
         <Navbar />
         <main className="pt-4">{children}</main>
+        </AuthInitializer>
       </AuthProvider>
+     
       </QueryClientProviderWrapper>
       </body>
     </html>

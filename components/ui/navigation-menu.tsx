@@ -9,8 +9,11 @@ import {
   NavigationMenuContent,
 } from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
+import { useAuth } from "../../context/auth-context";
 
 export function NavigationMenu() {
+  const {user , isAuthenticated}= useAuth();
+  console.log(user, isAuthenticated)
   return (
     <RadixNavigationMenu>
       <NavigationMenuList className="flex gap-6">

@@ -2,12 +2,8 @@ export interface User {
   _id: string;
   email: string;
   name: string;
-  
   phone?: string;
-  role: 'student' | 'admin' ;
- 
-  createdAt: string;
- 
+  role: 'student' | 'admin' | 'instructor' 
 }
 
 
