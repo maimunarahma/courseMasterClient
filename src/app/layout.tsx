@@ -6,6 +6,7 @@ import { QueryClientProviderWrapper } from '../../components/tanstack'
 import { AuthInitializer } from "../../@/components/authInitializer";
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

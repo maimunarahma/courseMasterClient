@@ -100,7 +100,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setLoading(true);
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/auth/login`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/auth`,
         { email, password },
         { withCredentials: true }
       );

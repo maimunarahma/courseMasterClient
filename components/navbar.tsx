@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/" className="text-xl font-bold">MyApp</Link>
+        <Link href="/" className="text-xl font-bold">Course Master</Link>
         <NavigationMenu />
         <div className="flex items-center gap-3">
          
@@ -25,7 +25,7 @@ export default function Navbar() {
            <Button variant="outline" onClick={handleLogout}>Logout</Button>
 </span> ):
 <>
- <Link href="/login"><Button variant="outline">Login</Button></Link>
+ <Link href="/auth/login"><Button variant="outline">Login</Button></Link>
           <Link href="/auth/register"><Button>Register</Button></Link> </>}
         </div>
       </div>
